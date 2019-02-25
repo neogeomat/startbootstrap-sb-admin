@@ -145,7 +145,7 @@
             center: [37.8, -6.9],
             zoom: 2
         })
-        .addLayer(new L.TileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"));
+        .addLayer(new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"));
 
     var svg = d3.select(map.getPanes().overlayPane).append("svg");
     var g = svg.append("g").attr("class", "leaflet-zoom-hide");
@@ -171,7 +171,7 @@
         this.stream.point(point.x, point.y);
     }
 
-    d3.json("http://emotional-apps.com/apis/meit/stats/getdata.php?test=1&gender=all&age=all&begindate=2000-01-01&enddate=2018-02-04", function(collection) {
+    d3.json("https://emotional-apps.com/apis/meit/stats/getdata.php?test=1&gender=all&age=all&begindate=2000-01-01&enddate=2018-02-04", function(collection) {
         // if (error) throw error;
 
         min = d3.min(collection, function(d) {
@@ -190,7 +190,7 @@
             })
         ]);
         //Load in GeoJSON data
-        d3.json("http://pixel.uji.es/teaching/countries.geo.json.php", function(json) {
+        d3.json("https://pixel.uji.es/teaching/countries.geo.json.php", function(json) {
             //Merge the ag. data and GeoJSON
             //Loop through once for each ag. data value
             var transform = d3.geo.transform({

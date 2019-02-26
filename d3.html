@@ -190,7 +190,7 @@
             })
         ]);
         //Load in GeoJSON data
-        d3.json("https://pixel.uji.es/teaching/countries.geo.json.php", function(json) {
+        d3.json("https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json", function(json) {
             //Merge the ag. data and GeoJSON
             //Loop through once for each ag. data value
             var transform = d3.geo.transform({
